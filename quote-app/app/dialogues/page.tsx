@@ -20,7 +20,7 @@ async function getAllProverbs(): Promise<DialoguesResponse> {
   
   const DialoguesPage: NextPage = async () => {
      const allProverbs = await getAllProverbs();
-     console.log("getAll : " , JSON.stringify(allProverbs));
+   
     return (
    
   <div className='min-h-screen bg-white text-black pb-10'>
@@ -34,7 +34,7 @@ async function getAllProverbs(): Promise<DialoguesResponse> {
               <div key={data.id} className='flex '>
                 <p className='w-1/4'>{data.series}</p>
                 <p className='w-1/4'>{data.character}</p>
-                <p>{data.text}</p>
+                <p className='break-all'>{data.text}</p>
               </div>
             ))}
           </div>

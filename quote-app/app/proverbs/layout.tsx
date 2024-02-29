@@ -13,13 +13,5 @@ const  ProverbsLayout : React.FC<ProverbsLayoutProps> = (props)=>{
 };
 
 
-export const getServerSideProverbs= async ()=>{
-    const proverbsData = await (await fetch("https://wordsapi-nkj3.onrender.com/proverbs")).json();
-    return {
-        props:{
-            proverbsData,
-        }
-    }
-}
 
 export default ProverbsLayout;
